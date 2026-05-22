@@ -648,7 +648,7 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-const LANG_LABELS: Record<Language, string> = {
+export const LANG_LABELS: Record<Language, string> = {
   en: 'EN', ur: 'اردو',
 };
 
@@ -659,8 +659,6 @@ export const LANG_FULL_LABELS: Record<Language, string> = {
 export const LANG_FLAGS: Record<Language, string> = {
   en: '🇬🇧', ur: '🇵🇰',
 };
-
-export { LANG_LABELS };
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Language>(() => {
